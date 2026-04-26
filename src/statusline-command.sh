@@ -23,7 +23,7 @@ BAR=""
 OUT="[$MODEL] $BAR $PCT%"
 if [ -n "$FIVE_PCT" ]; then
   RESET_FMT=""
-  [ -n "$FIVE_RESET" ] && RESET_FMT=" ↻$(date -d "@$FIVE_RESET" +%H:%M 2>/dev/null)"
+  [ -n "$FIVE_RESET" ] && RESET_FMT=" ↻ $(date -d "@$FIVE_RESET" +%H:%M 2>/dev/null)"
   OUT="$OUT | 5h ${FIVE_PCT}%${RESET_FMT}"
 fi
 [ -n "$WEEK_PCT" ] && OUT="$OUT | 7d ${WEEK_PCT}%"
